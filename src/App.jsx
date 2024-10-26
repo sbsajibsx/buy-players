@@ -6,6 +6,11 @@ import Overlap from "./components/Overlap/Overlap";
 import Active from "./components/Active/Active";
 
 function App() {
+  const [prices, setPrices] = useState(0);
+  const handlePrice = (price)=>{
+    const newPrice = prices + price;
+    setPrices(newPrice);
+  }
 const [isActives, setIsActives] = useState( {
   available: true,
   status: "available"
@@ -27,7 +32,7 @@ const handleIsActiveState =(status)=>{
 
   return (
     <>
-      <Header></Header>
+      <Header handlePrice={handlePrice} prices={prices}></Header>
       <Active isActives={isActives} handleIsActiveState={handleIsActiveState}></Active>
       
       <div >

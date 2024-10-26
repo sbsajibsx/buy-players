@@ -2,11 +2,11 @@ import Banner from "../Banner/Banner";
 import Navbar from "../Navbar/Navbar";
 
 
-const Header = () => {
+const Header = ({handlePrice, prices}) => {
     return (
         <div>
-            <Navbar></Navbar>
-            <Banner></Banner>
+            <Navbar prices={prices}></Navbar>
+            <Banner handlePrice={handlePrice}></Banner>
         </div>
     );
 };

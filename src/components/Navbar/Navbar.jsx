@@ -2,7 +2,7 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { CiMenuBurger } from "react-icons/ci";
 import logo from "../../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({prices}) => {
   return (
     <div>
       <div className="flex justify-between items-center w-11/12 mx-auto mt-2">
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center items-center p-3 border rounded-xl gap-2">
             <p>
-              <span>0</span> Coin
+              <span>{prices}</span> Coin
             </p>
             <p className="text-xl text-yellow-400">
               <AiFillDollarCircle />
