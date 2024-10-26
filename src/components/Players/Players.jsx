@@ -11,6 +11,7 @@ const Players = ({handleSelectedPlayers}) => {
   return (
     <div>
       <div className="w-11/12 mx-auto">
+      <div className="text-3xl font-bold">Available Players</div>
         <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 space-y-3">
           {players.map((player) => (
             <Player key={player.id} handleSelectedPlayers={handleSelectedPlayers} player={player}></Player>
