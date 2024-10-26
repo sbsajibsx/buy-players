@@ -7,9 +7,18 @@ import Active from "./components/Active/Active";
 
 function App() {
   const [prices, setPrices] = useState(0);
+  const handleDeletePrice = (pr)=>{
+    if(pr > prices){
+      
+      return
+    }
+    setPrices(prices - pr);
+  }
   const handlePrice = (price)=>{
+    alert('successfully claim')
     const newPrice = prices + price;
     setPrices(newPrice);
+    
   }
 const [isActives, setIsActives] = useState( {
   available: true,
@@ -33,14 +42,19 @@ const handleIsActiveState =(status)=>{
   return (
     <>
       <Header handlePrice={handlePrice} prices={prices}></Header>
-      <Active isActives={isActives} handleIsActiveState={handleIsActiveState}></Active>
+      <Active prices={prices} handleDeletePrice={handleDeletePrice} isActives={isActives} handleIsActiveState={handleIsActiveState}></Active>
       
-      <div >
-        <div>
+      <div className="relative">
+      
+        <div className="absolute ">
           <Overlap></Overlap>
+          
         </div>
+        <Footer></Footer>
       </div>
-      <Footer></Footer>
+      
+      
+      
     </>
   );
 }

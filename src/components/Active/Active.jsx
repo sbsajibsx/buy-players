@@ -4,7 +4,7 @@ import Selected from "../Selected/Selected";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Active = ({ handleIsActiveState, isActives }) => {
+const Active = ({ handleIsActiveState, isActives, handleDeletePrice, prices }) => {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
 
   const handleDelete = (id) =>{
@@ -24,7 +24,19 @@ const Active = ({ handleIsActiveState, isActives }) => {
   const handleSelectedPlayers = (player) => {
     const { name } = player;
     const isExist = selectedPlayers.find((p) => p.id == player.id);
-    if (isExist) {
+    if(selectedPlayers.length > 5){
+        toast.error(' 6 Player Already Added. Please Remove Some Players then Added New Player', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
+    else if(isExist) {
         toast.warn(` ${name} Already Added`, {
             position: "top-center",
             autoClose: 5000,
@@ -37,8 +49,24 @@ const Active = ({ handleIsActiveState, isActives }) => {
             
             });
     } else {
-      const newPlayers = [...selectedPlayers, player];
+        handleDeletePrice(player.price)
+        if(prices < player.price){
+            return;
+        }
+      else{
+        const newPlayers = [...selectedPlayers, player];
       setSelectedPlayers(newPlayers);
+      toast.success(`${name} Successfully Added`, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+      }
     }
   };
 
