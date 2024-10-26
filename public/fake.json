@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Virat Kohli",
+        "price": 100000,
+        "rating": 9.4,
+        "country": "India",
+        "hand": "Right Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg/330px-Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Joe Root",
+        "price": 55562,
+        "rating": 9.6,
+        "country": "UK",
+        "hand": "Left Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Joe_Root_HIP1487_%28cropped%29.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Steve Smith",
+        "price": 24155,
+        "rating": 7.4,
+        "country": "Australia",
+        "hand": "Right Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Steve_Smith_%28cricketer%29%2C_2014_%28cropped%29.jpg/800px-Steve_Smith_%28cricketer%29%2C_2014_%28cropped%29.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Kane Williamson",
+        "price": 7454,
+        "rating": 9.2,
+        "country": "New Zealand",
+        "hand": "Right Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kane_Williamson_in_2019.jpg/330px-Kane_Williamson_in_2019.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Babar Azam",
+        "price": 54865,
+        "rating": 9.3,
+        "country": "Pakistan",
+        "hand": "Right Handed Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Babar_azam_2023.jpg/330px-Babar_azam_2023.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Ben Stokes",
+        "price": 65442,
+        "rating": 8.1,
+        "country": "UK",
+        "hand": "Left Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ben_Stokes%2C_2013_%28cropped%29.jpg/1096px-Ben_Stokes%2C_2013_%28cropped%29.jpg"
+    },
+    {
+        "id": 7,
+        "name": "David Warner",
+        "price": 78462,
+        "rating": 9.9,
+        "country": "Australia",
+        "hand": "Left Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/DAVID_WARNER_%2811704782453%29.jpg/330px-DAVID_WARNER_%2811704782453%29.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Rohit Sharma",
+        "price": 26524,
+        "rating": 9.3,
+        "country": "India",
+        "hand": "Right Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/330px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Jos Buttler",
+        "price": 66444,
+        "rating": 7.6,
+        "country": "UK",
+        "hand": "Right Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Jos_Buttler_in_2023.jpg/330px-Jos_Buttler_in_2023.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Quinton de Kock",
+        "price": 711111,
+        "rating": 10,
+        "country": "South Africa",
+        "hand": "Left Hand Batsman",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/QUINTON_DE_KOCK_%2815681398316%29.jpg/330px-QUINTON_DE_KOCK_%2815681398316%29.jpg"
+    }
+]
