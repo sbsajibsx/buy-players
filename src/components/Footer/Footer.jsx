@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <footer className="footer bg-neutral text-neutral-content p-10 pt-52 border-b-2">
+        <footer className="footer bg-neutral text-neutral-content p-10 md:pt-52 border-b-2">
           <nav>
             <h6 className="footer-title">About Us</h6>
             <p>
