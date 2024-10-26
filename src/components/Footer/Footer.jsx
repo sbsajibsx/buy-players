@@ -2,8 +2,8 @@ import footerBg from "../../assets/bg-shadow.png";
 const Footer = () => {
   return (
     <div>
-      <div className="w-11/12 mx-auto relative">
-        <div className="border-2 absolute  w-11/12 mx-auto -top-24 left-16 rounded-xl">
+      <div className="w-11/12 mx-auto md:relative">
+        <div className="border-2 md:absolute  w-11/12 mx-auto -top-24 left-16 rounded-xl">
           <div
             className="hero w-auto m-6 rounded-xl bg-white"
             style={{
@@ -22,7 +22,7 @@ const Footer = () => {
                 <p className="mb-5 text-black">
                   Get the latest updates and news right in your inbox!
                 </p>
-                <div className="flex">
+                <div className="md:flex">
                 <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                 <button className="btn btn-active bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ml-2">Subscribe</button>
                 </div>
