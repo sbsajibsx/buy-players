@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import Players from "../Players/Players";
 import Selected from "../Selected/Selected";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import {  toast } from "react-toastify";
+
 
 const Active = ({ handleIsActiveState, isActives, handleDeletePrice, prices }) => {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
@@ -72,7 +73,7 @@ const Active = ({ handleIsActiveState, isActives, handleDeletePrice, prices }) =
 
   return (
     <div>
-      <div className="md:flex justify-end items-center my-6 w-11/12 mx-auto">
+      <div className="md:flex justify-end items-center my-6 w-11/12 mx-auto sticky">
         <div className="flex ">
           <button
             onClick={() => handleIsActiveState("available")}
@@ -100,23 +101,20 @@ const Active = ({ handleIsActiveState, isActives, handleDeletePrice, prices }) =
         </div>
       ) : (
         <div>
-          <Selected handleDelete={handleDelete} selectedPlayers={selectedPlayers}></Selected>
+          <Selected handleIsActiveState={handleIsActiveState} handleDelete={handleDelete} selectedPlayers={selectedPlayers}></Selected>
         </div>
       )}
       {/* <ToastContainer /> */}
-      <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light" />
+      
     </div>
   );
 };
+
+Active.propTypes ={
+    handleIsActiveState: PropTypes.func.isRequired,
+    isActives: PropTypes.object.isRequired,
+    handleDeletePrice: PropTypes.func.isRequired,
+    prices: PropTypes.object.isRequired
+}
 
 export default Active;

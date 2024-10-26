@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { AiFillDollarCircle } from "react-icons/ai";
 import { CiMenuBurger } from "react-icons/ci";
 import logo from "../../assets/logo.png";
@@ -5,7 +6,7 @@ import logo from "../../assets/logo.png";
 const Navbar = ({prices}) => {
   return (
     <div>
-      <div className="flex justify-between items-center w-11/12 mx-auto mt-2">
+      <div className="flex justify-between items-center w-11/12 mx-auto mt-2 sticky">
         <div>
           <img className="h-16" src={logo} alt="" />
         </div>
@@ -61,5 +62,9 @@ const Navbar = ({prices}) => {
     </div>
   );
 };
+
+Navbar.propTypes ={
+  prices: PropTypes.object.isRequired
+}
 
 export default Navbar;

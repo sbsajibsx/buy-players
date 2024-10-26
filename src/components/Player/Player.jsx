@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FaUser } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
@@ -50,5 +51,11 @@ const Player = ({ player, handleSelectedPlayers }) => {
     </div>
   );
 };
+
+Player.propTypes ={
+  player: PropTypes.object.isRequired,
+  handleSelectedPlayers: PropTypes.func.isRequired,
+  
+}
 
 export default Player;
