@@ -1,18 +1,22 @@
-import PropTypes from 'prop-types';
-import { FaUser } from "react-icons/fa";
-import { FaFlag } from "react-icons/fa";
-import { FaDollarSign } from "react-icons/fa";
+import PropTypes from "prop-types";
+import { FaUser, FaFlag, FaDollarSign } from "react-icons/fa";
 
 const Player = ({ player, handleSelectedPlayers }) => {
-  console.log(Player);
+  console.log(player);
+
   const { name, price, country, hand, img, rating } = player;
+
   return (
-    <div>
-      <div className="card card-compact bg-base-100 shadow-xl">
-        <figure className="p-4">
-          <img className="md:h-96 w-full rounded-2xl" src={img} alt="Shoes" />
-        </figure>
-        <div className="card-body space-y-3">
+    <div className="card card-compact bg-base-100 shadow-xl h-full">
+      <figure>
+        <img
+          className="w-full h-[400px] object-cover rounded-2xl py-6"
+          src={img}
+          alt={name}
+        />
+      </figure>
+      <div className="card-body flex flex-col justify-between space-y-3">
+        <div>
           <h2 className="card-title">
             <FaUser /> {name}
           </h2>
@@ -35,27 +39,31 @@ const Player = ({ player, handleSelectedPlayers }) => {
               <p>Bat Hand</p>
               <p className="text-slate-400 justify-end flex">{hand}</p>
             </div>
-            <div className="flex justify-between items-center">
-              <p className="flex items-center gap-0">
-                Price:
-                <FaDollarSign />
-                {price}
-              </p>
-              <div>
-                <button onClick={()=>handleSelectedPlayers(player)} className="btn">Choose Player</button>
-              </div>
-            </div>
           </div>
+        </div>
+        <div className="flex justify-between items-center">
+          <p className="flex items-center gap-1">
+            Price: <FaDollarSign /> {price}
+          </p>
+          <button onClick={() => handleSelectedPlayers(player)} className="btn">
+            Choose Player
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-Player.propTypes ={
-  player: PropTypes.object.isRequired,
+Player.propTypes = {
+  player: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    country: PropTypes.string.isRequired,
+    hand: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+  }).isRequired,
   handleSelectedPlayers: PropTypes.func.isRequired,
-  
-}
+};
 
 export default Player;
